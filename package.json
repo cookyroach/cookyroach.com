@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run sass && npx @11ty/eleventy --input=src",
     "sass": "sass --style=compressed src/scss/styles.scss _site/styles.css",
-    "watch:eleventy": "eleventy --serve",
+    "watch:eleventy": "npx @11ty/eleventy --input=src --serve",
     "watch:sass": "npm run sass -- --watch",
     "start": "npm-run-all sass --parallel watch:*"
   },
