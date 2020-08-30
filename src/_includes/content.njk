@@ -1,0 +1,11 @@
+---
+layout: layout.njk
+---
+
+{% if heroImage %}
+   <div class="hero" style="background-image: url({{ heroImage }})"></div>
+{% endif %}
+<main class="main">
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+</main>
