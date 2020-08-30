@@ -4,10 +4,12 @@ body {
     margin: 0;
 	position: relative;
 	background: #eee;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .header {
-	margin: auto;
 	text-align: center;
 	padding: 2rem 1rem;
 	background: white;
@@ -89,6 +91,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	margin-top: auto;
 
 	&::after {
 		content: '';
