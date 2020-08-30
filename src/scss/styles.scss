@@ -11,15 +11,34 @@ body {
 	text-align: center;
 	padding: 2rem 1rem;
 	background: white;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 4rem;
+		height: 4rem;
+		background-image: url('https://res.cloudinary.com/cookyroach/image/upload/v1598802815/assets/cookie3_bo8y1h.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+		bottom: -2rem;
+		left: 10%;
+	}
 }
 
-header h1 {
+header .logo {
 	font-weight: 100;
 	text-transform: lowercase;
 	font-size: 2em;
 	line-height: 0.7;
     letter-spacing: 1px;
-    margin-top: 0;
+	margin: 0;
+	color: black;
+	text-decoration: none;
+	font-family: 'Karla', sans-serif;
 }
 
 .header nav ul {
@@ -50,7 +69,7 @@ header h1 {
 }
 
 .main p {
-	text-align: center;
+	max-width: 500px;
 }
 
 img {
@@ -69,6 +88,19 @@ footer {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+
+	&::after {
+		content: '';
+		width: 5rem;
+		height: 5rem;
+		background-image: url('https://res.cloudinary.com/cookyroach/image/upload/v1598801901/assets/roachy.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+		top: -2rem;
+		right: 10%;
+	}
 }
 
 footer ul {
@@ -78,10 +110,6 @@ footer ul {
 	list-style-type: none;
 }
 
-footer ul li {
-	margin-right: 1rem;
-}
-
-footer a {
-	font-size: 0.875rem;
+footer ul li:not(:first-child) {
+	margin-left: 1rem;
 }

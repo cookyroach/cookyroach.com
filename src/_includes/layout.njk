@@ -8,14 +8,11 @@
 	<meta name="author" content="cookyroach">
 	<link href="https://fonts.googleapis.com/css?family=Karla:700|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
-    <title>cookyroach</title>
+    <title>{{ title }} | cookyroach</title>
 </head>
 <body>
     {% include "header.html" %}
-    <div class="hero" style="background-image: url(https://res.cloudinary.com/cookyroach/image/upload/c_fit,w_1500,q_80/rocky_rainbow.png)"></div>
-    <main class="main">
     {{ content | safe }}
-    </main>
     {% include "footer.html" %}
 </body>
 </html>
