@@ -3,7 +3,9 @@ layout: layout.njk
 ---
 
 {% if heroImage %}
-   <div class="hero" style="background-image: url({{ heroImage }})"></div>
+   <div class="hero">
+        <img src="{{heroImage}}" alt="">
+   </div>
 {% endif %}
 <main class="main">
     <h1>{{ title }}</h1>

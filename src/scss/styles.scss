@@ -57,8 +57,12 @@ header .logo {
 
 .hero {
 	height: 300px;
-    background-position: center;
-    background-size: cover;
+
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
 }
 
 .main {
@@ -76,11 +80,11 @@ header .logo {
 
 img {
 	max-width: 100%;
-	margin: 1rem;
 }
 
 .page {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	margin: 0 0 2rem;
 }
 
 footer {
