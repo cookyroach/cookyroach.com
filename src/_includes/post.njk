@@ -1,0 +1,57 @@
+---
+layout: layout.njk
+---
+
+{% if heroImage %}
+   <div class="hero">
+        <img src="{{heroImage}}" alt="">
+   </div>
+{% endif %}
+<div style="background: white;">
+    <main class="post">
+        <h1>{{ title }}</h1>
+        <div class="meta">
+            <img class="avatar" src="https://res.cloudinary.com/cookyroach/image/upload/w_64,h_64,c_fit/v1598801901/assets/roachy.png" alt="">
+            <span>cookyroach</span>
+            <span>{{date}} •  {{readingTime}} read</span>
+        </div>
+        {{ content | safe }}
+    </main>
+</div>
+
+<script type="application/ld+json">
+{
+"@context": "http://schema.org",
+"@type": "BlogPosting",
+"mainEntityOfPage":{
+"@type":"WebPage",
+"@id":"https://cookyroach.com{{page.url}}"
+},
+"headline": "{{title}}",
+"image": {
+"@type": "ImageObject",
+"url": "{{heroImage}}",
+"height": 463,
+"width": 700
+},
+"datePublished": "{{date}}",
+"dateModified": "{{date}}",
+"author": {
+"@type": "Person",
+"name": "cookyroach"
+},
+"publisher": {
+"@type": "Organization",
+"name": "cookyroach",
+"logo": {
+"@type": "ImageObject",
+"url": "https://res.cloudinary.com/cookyroach/image/upload/v1598801901/assets/roachy.png",
+"width": 333,
+"height": 315
+}
+},
+"description": "{{preamble}}",
+"articleBody": "{{content}}"
+}
+</script>
+

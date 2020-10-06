@@ -65,6 +65,40 @@ header .logo {
 	}
 }
 
+.post {
+	max-width: 680px;
+	margin: 0px auto 50px;
+	padding: 0 1rem;
+}
+
+.post p, .post ul {
+	font-size: 1.125rem;
+	line-height: 1.75;
+}
+
+.post h1 + div + p {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+.meta {
+	display: flex;
+	align-items: center;
+	margin-top: 2rem;
+
+	span {
+		margin-right: 1rem;
+	}
+}
+
+.avatar {
+	height: 2rem;
+	width: 2rem;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-right: 0.5rem;
+}
+
 .main {
 	max-width: 600px;
 	margin: 0px auto 50px;
