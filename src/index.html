@@ -3,18 +3,54 @@ layout: layout.njk
 title: cookyroach
 ---
 
-<main class="main">
-    <h2>Pet Rocky</h2>
-    <a style="margin-bottom: 1rem;" href="https://tapas.io/series/Pet-Rocky">Read it on tapas</a>
-    <a href="/pet-rocky/" style="text-decoration: none">
-      <div class="card" style="background-image: url('https://res.cloudinary.com/cookyroach/image/upload/v1598901210/rocky_rainbow3_ebeah8.png');">
-        <button>Read now</button>
-      </div>
-    </a>
-    <h2>Redbubble Shop</h2>
-    <a href="https://www.redbubble.com/people/cookyroach/shop?asc=u" style="text-decoration: none">
-      <div class="card" style="background-image: url('https://res.cloudinary.com/cookyroach/image/upload/v1598903538/cookiebugs_maekzs.png');">
-        <button>Shop now</button>
-      </div>
-    </a>
+<style>
+  section {
+    background: #ffeae1;
+    padding: 2rem 1rem 3rem;
+    min-height: 200px;
+  }
+
+  section .wrapper {
+    margin: auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  section .wrapper--center {
+    align-items: center;
+  }
+
+  section:nth-child(2) {
+    background: #f15252;
+    color: white;
+  }
+
+  section:nth-child(2)   .button {
+      color: #f15252;
+      background: white;
+      font-weight: bold;
+    }
+
+    section .button {
+      margin-top: 1rem;
+    }
+</style>
+
+<main>
+  <section>
+    <div class="wrapper">
+      <h1>Hi! I'm a comic creator & illustrator</h1>
+      <a class="button" href="https://tapas.io/series/Pet-Rocky">Read my comic here</a>
+      <img width="300" style="align-self: center; margin-top: 2rem;"src="https://res.cloudinary.com/cookyroach/image/upload/v1605709963/happy.png" alt="">
+    </div>
+  </section>
+  <section>
+    <div class="wrapper wrapper--center">
+      <h2>Support me</h2>
+      <a class="button" href="/">Redbubble shop</a>
+    </div>
+  </section>
 </main>
