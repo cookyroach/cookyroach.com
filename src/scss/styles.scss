@@ -1,4 +1,6 @@
 @use 'typography';
+@use 'colors';
+@use 'section';
 
 body {
     margin: 0;
@@ -16,18 +18,40 @@ body {
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	z-index: 4;
 
-	&::after {
-		content: '';
+	// &::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	width: 3.5rem;
+	// 	height: 3.5rem;
+	// 	background-image: url('https://res.cloudinary.com/cookyroach/image/upload/v1620492234/assets/cookie.png');
+	// 	background-repeat: no-repeat;
+	// 	background-size: contain;
+	// 	position: absolute;
+	// 	bottom: -2.5rem;
+	// 	left: 10%;
+	// }
+
+	&::before {
+		background: linear-gradient(
+			-45deg
+			, #ffffff 16px, transparent 0), linear-gradient(
+			45deg
+			, #ffffff 16px, transparent 0);
+		background-position: left-bottom;
+		background-repeat: repeat-x;
+		background-size: 32px 32px;
+		content: "";
+		display: block;
 		position: absolute;
-		width: 4rem;
-		height: 4rem;
-		background-image: url('https://res.cloudinary.com/cookyroach/image/upload/v1598802815/assets/cookie3_bo8y1h.png');
-		background-repeat: no-repeat;
-		background-size: contain;
-		position: absolute;
-		bottom: -2rem;
-		left: 10%;
+		transform: rotate(
+	180deg
+	);
+		bottom: -32px;
+		left: 0px;
+		width: 100%;
+		height: 32px;
 	}
 }
 
@@ -182,4 +206,83 @@ footer ul li:not(:first-child) {
     background-position: 83% 33%;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	margin-bottom: 2rem;
+}
+
+
+$color-bg: #fde3a7;
+$book-color-bg: lighten($color-bg, 20%);
+$book-color-border: lighten(#000, 85%);
+$book-border: 1px solid $book-color-border;
+
+%book-rounded-corners {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+
+  > li {
+    display: inline-block;
+    margin-left: 2em;
+  }
+
+  > li:first-child {
+    margin-left: 0;
+  }
+}
+
+.book {
+  @extend %book-rounded-corners;
+
+  cursor: pointer;
+  display: block;
+  width: 200px;
+  height: 300px;
+  position: relative;
+  background: $book-color-bg; 
+  z-index: 1;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%), 0 6px 16px 0 rgb(0 0 0 / 25%);
+  overflow: hidden;
+  transition: box-shadow .3s linear;
+  margin: 2rem 0;
+}
+
+.book img {
+  @extend %book-rounded-corners;
+
+  width: inherit;
+  height: inherit;
+  transform-origin: 0 50%;
+  transform: rotateY(0);
+  transition: all .45s ease;
+}
+
+.book:hover {
+  box-shadow: 0 2px 4px 0 rgba(#000, .25), 0 6px 16px 0 rgba(#000, .45);
+
+  img {
+    transform: rotateY(-25deg);
+    box-shadow: 1px 1px 5px 5px rgba(#000, .2);
+  }
+}
+
+.book::after,
+.book::before {
+  @extend %book-rounded-corners;
+
+  content: '';
+  display: block;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  background: $book-color-bg;
+  border: $book-border;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('https://res.cloudinary.com/cookyroach/image/upload/v1620494690/028_03.jpg');
 }
