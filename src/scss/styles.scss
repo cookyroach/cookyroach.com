@@ -303,3 +303,21 @@ $book-border: 1px solid $book-color-border;
   background-position: center;
   background-image: url('https://res.cloudinary.com/cookyroach/image/upload/v1620494690/028_03.jpg');
 }
+
+
+.grid {
+    display:flex;
+	margin-bottom: 2rem;
+
+	h3 {
+		margin: 0;
+	}
+  }
+
+.grid img {
+width: 200px;
+height: 200px;
+margin-right: 1.25rem;
+border-radius: 0.25rem;
+border: 0.75rem solid white;
+}
