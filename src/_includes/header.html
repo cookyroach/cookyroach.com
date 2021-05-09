@@ -3,13 +3,13 @@
     <nav>
         <ul>
             <li>
-                <a href="/about">About</a>
+                <a {{ 'class=active' if '/about' in page.url }} href="/about">About</a>
             </li>
             <li>
-                <a href="/pet-rocky">Pet Rocky</a>
+                <a {{ 'class=active' if '/pet-rocky' in page.url }} href="/pet-rocky">Pet Rocky</a>
             </li>
             <li>
-                <a href="/blog">Blog</a>
+                <a {{ 'class=active' if '/blog' in page.url }} href="/blog">Blog</a>
             </li>
         </ul>
     </nav>
