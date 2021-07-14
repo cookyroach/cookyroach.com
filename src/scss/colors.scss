@@ -3,24 +3,3 @@ $strawberry: #f15252;
 $blueberry: #2908df;
 $cherry: #ffd3e1; 
 $purple: #cbc1ff;
-
-.color {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    border: 0.5rem solid white;
-    margin: 0.5rem;
-    display: inline-block;
-}
-
-.cookie  {
-    background: $cookie;
-}
-
-.strawberry {
-    background: $strawberry;
-}
-
-.blueberry {
-    background: $blueberry;
-}

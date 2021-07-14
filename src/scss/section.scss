@@ -1,8 +1,8 @@
-@use 'colors';
+@import 'colors';
 
 section {
-    background: #ffeae1;
-    padding: 2rem 1rem 3rem;
+    background: $cookie;
+    padding: 2rem 1rem 4rem;
     min-height: 200px;
   }
 
@@ -19,28 +19,20 @@ section {
     align-items: center;
   }
 
-  section:nth-child(3) {
-    background: #f15252;
-    color: white;
-  }
-
-  section:nth-child(3)   .button {
-      color: #f15252;
-      background: white;
-      font-weight: bold;
-    }
-
-    section .button {
-      margin-top: 1rem;
-    }
-
 section {
     &.cherry {
-        background: #ffd3e1;
-        // border-bottom: 2px dashed white;
-        // box-shadow: 0 0 0 1em #ffd3e1, 0px 13px 6px 4px rgb(164 10 74 / 37%);
-        // z-index: 3;
-        // margin-bottom: 1rem;
-        // position: relative;
+        background: $cherry;
+    }
+
+    &.strawberry {
+      background: $strawberry;
+      color: white;
+
+      .button {
+        color: $strawberry;
+        background: white;
+        font-weight: bold;
+        margin-top: 1rem;
+      }
     }
 }
