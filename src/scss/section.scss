@@ -2,21 +2,23 @@
 
 section {
     background: $cookie;
-    padding: 2rem 1rem 4rem;
+    padding: 2rem 1rem 3rem;
     min-height: 200px;
-  }
-
-  section .wrapper {
-    margin: auto;
-    max-width: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  section .wrapper--center {
     align-items: center;
+    text-align: center;
+
+    img,
+    h1,
+    p {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
   }
 
 section {
