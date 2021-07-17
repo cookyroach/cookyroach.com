@@ -1,5 +1,35 @@
 ---
 layout: layout.njk
-title: Pet Rocky
+title: Portfolio
 ---
-<h1>Portfolio</h1>
+<style>
+    .portfolio {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .portfolio img {
+        max-height: 500px;
+        width: auto;
+        max-width: 100%;
+        background: white;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        object-fit: contain;
+        margin: 0.5rem;
+
+    }
+</style>
+<section>
+    <h1>Portfolio</h1>
+    <h3 style="    margin-top: 0;
+    font-family: 'Gamja Flower',cursive; text-align: center;
+    font-size: 2rem;
+    color: #332286;">Watch me draw the same thing over and over</h3>
+    <div class="portfolio">
+        {% for image in portfolioImages -%}
+          <img src="{{ image }}"/>
+        {% endfor -%}
+    </div>
+</section>
